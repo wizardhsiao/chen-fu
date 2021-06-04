@@ -1,0 +1,393 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 桌機板 */
+@media screen and (max-width: 2000px) {
+    .carousel-inner {
+        height: 55vh;
+    }
+
+    .LGlogo {
+        width: 150px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* .leftLOGO {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 150px;
+        padding-bottom: 150px;
+        background-image: url(../img/ChenFu.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    } */
+
+
+    nav {
+        position: fixed;
+    }
+    .mobile {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        /* margin-top: 50px; */
+
+    }
+
+    .mobile>li {
+        display: inline;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+
+    a {
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* 公司簡介&服務項目 */
+
+    .survice{
+        margin: 100px 0;
+    }
+    h2{
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    h3{
+        margin-top: 150px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    p{
+        font-size: 21px;
+    }
+    .sur{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    h4 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .icon-1,
+    .icon-2,
+    .icon-3,
+    .icon-4 {
+        background-color: rgb(112, 218, 245);
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 150px;
+    }
+
+    .icon-1 {
+        background-image: url(../img/street-light.png);
+        background-position: center center;
+        background-size: 100px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-2 {
+        background-image: url(../img/light-bulb.png);
+        background-size: 100px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .icon-3{
+        background-image: url(../img/window.png);
+        background-size: 90px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .icon-4 {
+        background-image: url(../img/客服.png);
+        background-size: 95px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    /* footer */
+    footer{
+        /* margin: 0 auto; */
+        margin-top: 100px;
+        background-color: cadetblue;
+        position: relative;
+        bottom: -100px;
+    }
+    .contact{
+        width: 50%;
+        padding-bottom: 50px;
+    }
+    h1{
+        font-size: 20px;
+        color: #fff;
+        padding-top: 50px;
+        text-align: center;
+    }
+    ol{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+/* 平板版 */
+@media screen and (max-width: 1024px){
+    .carousel-inner {
+        height: 55vh;
+    }
+    .sur{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+/* 手機版 */
+@media screen and (max-width: 576px) {
+    body {
+        padding: 0px auto;
+        width: 100%;
+    }
+
+    header {
+        display: block;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* .leftLOGO{
+        display: none;
+    } */
+
+    .logo {
+        background-image: url(../img/ChenFu.svg);
+        background-size: contain;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 100px;
+        padding-bottom: 110px;
+        margin: 0px auto;
+    }
+
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+
+    /* menu icon */
+
+    .menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9;
+    }
+
+    .menu_btn {
+        background-color: rgba(112, 218, 245, 0.5);
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    .icon {
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    .line {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: black;
+        border-radius: 99em;
+        transition: all 0.8s;
+    }
+
+    .top {
+        top: 23%;
+    }
+
+    .middle {
+        top: 70%;
+    }
+
+    .bottom {
+        top: 115%;
+    }
+
+    .icon.switch .top {
+        transform: translateY(0);
+        transform: rotate(405deg);
+        top: 70%;
+    }
+
+    .icon.switch .middle {
+        display: none;
+    }
+
+    .icon.switch .bottom {
+        top: 70%;
+        transform: translateY(30px);
+        transform: rotate(-405deg);
+    }
+
+    .mobile {
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: rgb(39, 142, 168);
+        top: 0;
+        left: -100%;
+        z-index: 99;
+        padding: 0;
+        transition: all 0.5s;
+    }
+
+    nav {
+        width: 100%;
+        display: block;
+        z-index: 3;
+    }
+
+    .mobile>li {
+        /* display: block; */
+        margin: 50px 0;
+        font-size: 24px;
+    }
+
+    li>a {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .mobile.show {
+        left: 0;
+    }
+
+
+    /* menu icon  */
+
+
+    .photo {
+        background-color: burlywood;
+        width: 100%;
+        padding-bottom: 80%;
+    }
+
+    .survice {
+        padding: 10px 30px;
+        margin: 0 auto;
+
+    }
+
+    h2 {
+        text-align: center;
+        /* margin-top: 15%; */
+        margin-bottom: 5%;
+    }
+
+    p {
+        letter-spacing: 3px;
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    h3,
+    h4 {
+        text-align: center;
+        margin: 30px;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+    h4{
+        margin-bottom: 60px;
+        margin-top: 20px;
+    }
+    .sur{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .icon-1,
+    .icon-2,
+    .icon-3,
+    .icon-4 {
+        background-color: rgb(112, 218, 245);
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 150px;
+    }
+
+    .icon-1 {
+        background-image: url(../img/street-light.png);
+        background-position: center center;
+        background-size: 100px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-2 {
+        background-image: url(../img/light-bulb.png);
+        background-size: 100px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .icon-3{
+        background-image: url(../img/window.png);
+        background-size: 90px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .icon-4 {
+        background-image: url(../img/客服.png);
+        background-size: 95px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    /* footer */
+    footer{
+
+    }
+    .contact{
+        width: 100%;
+    }
+}
