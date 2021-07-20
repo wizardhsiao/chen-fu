@@ -4,57 +4,111 @@
     margin: 0;
     box-sizing: border-box;
 }
-h1{
+
+h1 {
     margin: 0 auto;
     font-size: 20px;
     color: white;
     padding-top: 50px;
 }
+/* 開場LOGO */
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.logo {
+    background-image: url(../img/ChenFu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+}
+/* ----開場LOGO---- */
 
 /* footer */
 
-footer{
-    /* margin: 0 auto; */
+footer {
     margin-top: 100px;
     background-color: cadetblue;
     position: relative;
     bottom: -100px;
 }
-.contact{
+
+.contact {
     width: 50%;
     padding-bottom: 50px;
 }
-h1{
-    font-size: 20px;
+
+h1 {
+    font-size: 25px;
     color: #fff;
     padding-top: 50px;
     text-align: center;
 }
-ol{
+
+.information {
     padding: 0;
     margin: 0;
     text-align: center;
     color: #fff;
 }
+
 @media screen and (max-width:2000px) {
-    .hide{
+    .hide {
         display: none;
     }
-    
-    h2{
+    header {
+        position: relative;
+    }
+    .LGlogo {
+        z-index: 3;
+        width: 12%;
+        display: block;
+        margin-top: 20px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+    .title {
+        background-image: url(../img/title.jpg);
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 32vh;
+    }
+
+    h2 {
         text-align: center;
         margin: 40px 20px;
 
     }
-    h3{
+
+    h3 {
         text-align: center;
     }
-    .photo{
+
+    .photo {
         width: 75%;
-        margin: 40px auto;
+        margin: 80px auto;
         display: flex;
     }
-    .indoor,.outdoor,.lighter{
+
+    .indoor,
+    .outdoor,
+    .lighter {
         margin: auto;
         width: 30%;
         padding-bottom: 2%;
@@ -62,44 +116,42 @@ ol{
         box-shadow: rgba(0, 0, 0, 0.288) 5px 8px;
         border-radius: 5px;
     }
-    .frontCoverIndoor{
+
+    .frontCoverIndoor {
         background-image: url(../img/室內/1.jpg);
         width: 100%;
         padding-bottom: 60%;
         background-position: center center;
         background-size: cover;
     }
-    .frontCoverOutdoor{
+
+    .frontCoverOutdoor {
         background-image: url(../img/廟宇/S__37666890.jpg);
         width: 100%;
         padding-bottom: 60%;
         background-position: center center;
         background-size: cover;
     }
-    .frontCoverLighter{
+
+    .frontCoverLighter {
         background-image: url(../img/路燈/路燈_210512_4.jpg);
         width: 100%;
         padding-bottom: 60%;
         background-position: center center;
         background-size: cover;
     }
-    .LGlogo {
-        width: 150px;
-        display: block;
-        margin: 20px auto;
-    }     
+
+
     nav {
         position: fixed;
-        /* top: 20px;
-        left: 20px; */
+        top: 260px;
     }
+
     .mobile {
         width: 180px;
         display: flex;
         flex-direction: column;
         padding: 0;
-        /* margin-top: 50px; */
-
     }
 
     .mobile>li {
@@ -113,61 +165,43 @@ ol{
         text-align: center;
         text-decoration: none;
     }
-     /* footer */
-     footer{
-        padding-bottom: 10px;
-            }
-            .contact{
-                width: 100%;
-            }
-}
-@media screen and (max-width:576px){
-    body {
-        padding: 0px auto;
+
+    /* footer */
+    footer {
+        display: flex;
+    }
+
+    .contact {
+        width: 50%;
+    }
+    .information{
+        padding-top: 30px;
         width: 100%;
     }
+}
 
-    header {
-        display: block;
-        margin-top: 20px;
-        position: relative;
+/* 平板版 */
+@media screen and (max-width:770px){
+    .title {
+        background-image: url(../img/title.jpg);
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 20vh;
     }
-    h1 {
+    .survice{
         margin: 0 auto;
-        text-align: center;
     }
-    /* .leftLOGO{
-        display: none;
-    } */
-
-    .logo {
-        background-image: url(../img/ChenFu.svg);
-        background-size: contain;
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        width: 100px;
-        padding-bottom: 110px;
-        margin: 0px auto;
+    .photo {
+        width: 95%;
+        margin: 80px auto 100px auto;
+        display: flex;
     }
-
-    .carousel-inner {
-        height: 350px;
+    .introduction {
+        width: 65%;
+        margin: auto;
     }
-
-    .container {
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .LGlogo {
-        width: 150px;
-        display: block;
-        margin: 20px auto;
-    }
-
-
-
-    /* menu icon */
+    /* menu */
 
     .menu {
         position: fixed;
@@ -181,7 +215,6 @@ ol{
         width: 40px;
         height: 40px;
         border-radius: 10px;
-        z-index: 9;
     }
 
     .icon {
@@ -229,27 +262,44 @@ ol{
     }
 
     .mobile {
-        /* display: none; */
         width: 100%;
         height: 100vh;
         position: fixed;
         background-color: rgb(39, 142, 168);
         top: 0;
         left: -100%;
+        z-index: 9;
         padding: 0;
         transition: all 0.5s;
     }
 
     nav {
-        width: 100%;
         display: block;
         z-index: 3;
     }
+    .sur-menu{
+        display: none;
+    }
 
     .mobile>li {
-        /* display: block; */
         margin: auto 0px auto 114px;
         font-size: 24px;
+    }
+
+    li>a , .sur-btn {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+    }
+    .item>a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .mobile>li {
+        margin: auto 0px auto 210px;
+        font-size: 30px;
     }
 
     li>a {
@@ -258,48 +308,423 @@ ol{
         text-decoration: none;
         color: #fff;
     }
-    .moblieBg{
-        /* display: none; */
+
+    .moblieBg {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.308);
-        height: 100vh;
+        height: 110vh;
         position: relative;
-        top: -173px;
         left: -100%;
         transition: all 0.5s;
-        /* z-index: 9; */
     }
-    .moblieBg.show{
+
+    nav.show {
+        display: block;
+        width: 100%;
+        transition: all 0.5s;
+    }
+
+    .moblieBg.show {
+        display: block;
         left: 0%;
+        top: -280px;
     }
+
     .mobile.show {
         left: -30%;
+
     }
+
 
     /* menu icon  */
 
-    h3{
+    .survice {
+        padding: 10px 20px;
+        margin: 0 auto;
+
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    p {
+        letter-spacing: 3px;
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    h3 {
+        text-align: center;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+
+    h4 {
+        padding: 0;
+        margin: 30px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 60px;
+        margin-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .sur {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .icon-1,
+    .icon-2,
+    .icon-3,
+    .icon-4 {
+        background-color: rgb(112, 218, 245);
+        width: 110px;
+        height: 110px;
+        margin: 0 auto;
+        border-radius: 150px;
+    }
+
+    .icon-1 {
+        background-image: url(../img/street-light.png);
+        background-position: center center;
+        background-size: 75px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-2 {
+        background-image: url(../img/light-bulb.png);
+        background-size: 80px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .icon-3 {
+        background-image: url(../img/window.png);
+        background-size: 70px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .icon-4 {
+        background-image: url(../img/客服.png);
+        background-size: 75px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .sur {
+        display: flex;
+    }
+    footer {
+        margin-top: 100px;
+        background-color: cadetblue;
+        position: relative;
+        bottom: -200px;
+    }
+}
+
+
+@media screen and (max-width:576px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        display: block;
+        position: relative;
+    }
+    h1 {
+        margin: 0 auto;
         text-align: center;
     }
-    img{
+    /* 開場畫面 */
+    
+    .logo {
+        width: 45%;
+    }
+
+
+    .LGlogo {
+        z-index: 3;
+        width: 26%;
+        display: block;
+        margin-top: 5px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+    .title {
+        background-image: url(../img/title.jpg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 18vh;
+        position: relative;
+        top: -15px;
+    }
+
+
+    .LGlogo {
+        z-index: 3;
+        width: 26%;
+        display: block;
+        margin-top: 5px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .carousel-inner {
+        height: 350px;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* menu icon */
+
+        /* menu */
+
+        .menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9;
+        }
+    
+        .menu_btn {
+            background-color: rgba(112, 218, 245, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+    
+        .icon {
+            margin: auto;
+            width: 28px;
+            height: 28px;
+            position: relative;
+        }
+    
+        .line {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: black;
+            border-radius: 99em;
+            transition: all 0.8s;
+        }
+    
+        .top {
+            top: 20%;
+        }
+    
+        .middle {
+            top: 60%;
+        }
+    
+        .bottom {
+            top: 100%;
+        }
+    
+        .icon.switch .top {
+            transform: translateY(0);
+            transform: rotate(405deg);
+            top: 60%;
+        }
+    
+        .icon.switch .middle {
+            display: none;
+        }
+    
+        .icon.switch .bottom {
+            top: 60%;
+            transform: translateY(30px);
+            transform: rotate(-405deg);
+        }
+    
+        .mobile {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background-color: rgb(39, 142, 168);
+            top: 0;
+            left: -100%;
+            z-index: 9;
+            padding: 0;
+            transition: all 0.5s;
+        }
+    
+        nav {
+            display: block;
+            z-index: 3;
+        }
+        .sur-menu{
+            display: none;
+        }
+    
+        .mobile>li {
+            margin: auto 0px auto 114px;
+            font-size: 24px;
+        }
+    
+        li>a , .sur-btn {
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            color: #fff;
+        }
+        .item>a {
+            color: #fff;
+            font-size: 20px;
+        }
+    
+        .moblieBg {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.308);
+            height: 110vh;
+            position: relative;
+            left: -100%;
+            transition: all 0.5s;
+        }
+    
+        nav.show {
+            display: block;
+            width: 100%;
+            transition: all 0.5s;
+        }
+    
+        .moblieBg.show {
+            display: block;
+            left: 0%;
+            top: -280px;
+        }
+    
+        .mobile.show {
+            left: -30%;
+    
+        }
+    
+    
+        /* menu icon  */
+    
+    
+        .survice {
+            padding: 10px 20px;
+            margin: 0 auto;
+    
+        }
+    
+        h2 {
+            text-align: center;
+            margin-bottom: 5%;
+        }
+    
+        p {
+            letter-spacing: 3px;
+            line-height: 28px;
+            font-size: 18px;
+        }
+    
+        .sur {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .icon-1,
+        .icon-2,
+        .icon-3,
+        .icon-4 {
+            background-color: rgb(112, 218, 245);
+            width: 110px;
+            height: 110px;
+            margin: 0 auto;
+            border-radius: 150px;
+        }
+    
+        .icon-1 {
+            background-image: url(../img/street-light.png);
+            background-position: center center;
+            background-size: 75px;
+            background-repeat: no-repeat;
+        }
+    
+        .icon-2 {
+            background-image: url(../img/light-bulb.png);
+            background-size: 80px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    
+        .icon-3 {
+            background-image: url(../img/window.png);
+            background-size: 70px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    
+        .icon-4 {
+            background-image: url(../img/客服.png);
+            background-size: 75px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+    /*---- menu icon ---- */
+
+    h3 {
+        text-align: center;
+    }
+
+    img {
         width: 95%;
         margin: 15px auto;
         display: block;
     }
-    .hide{
+
+    .hide {
         display: none;
     }
-    .photo{
+
+    .photo {
         width: 75%;
-        margin: 40px auto;
+        margin: 40px auto 0 auto;
         display: block;
     }
-    .indoor,.outdoor,.lighter{
+
+    .indoor,
+    .outdoor,
+    .lighter {
         margin: 10px auto 30px auto;
         width: 100%;
         padding-bottom: 2%;
         background-color: rgb(235, 235, 235);
         box-shadow: rgba(0, 0, 0, 0.288) 5px 8px;
         border-radius: 5px;
+    }
+
+    /* footer */
+    footer{
+        display: block;
+        margin-top: 0;
+        width: 100%;
+    }
+    .contact{
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    .information{
+        padding: 0px 0 40px 0;
+        width: 100%;
     }
 }

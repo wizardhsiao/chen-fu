@@ -40,6 +40,9 @@
 
 <body>
     <header>
+        <div class="overlay">
+            <div class="logo"></div>
+          </div>
         <svg id="圖層_1" data-name="圖層 1" class="LGlogo" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1670.25 1483.98">
             <defs>
@@ -123,6 +126,7 @@
             <polygon class="cls-6"
                 points="1232.83 1470.81 1232.83 1244.55 1392.08 1244.55 1392.08 1251.59 1243.95 1251.59 1243.95 1357.7 1375.33 1357.7 1375.33 1364.73 1243.95 1364.73 1243.95 1470.81 1232.83 1470.81" />
         </svg>
+        <div class="title wow fadeInDown" data-wow-delay="0.1s"></div>
         <div class="menu">
             <div class="menu_btn">
                 <div class="icon">
@@ -134,17 +138,22 @@
         </div>
     </header>
     <nav>
-        <div class="leftLOGO"></div>
         <div class="moblieBg">
-            <ul class="mobile">
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="survice.html">服務項目</a></li>
-                <li><a href="#">聯絡我們</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+          <ul class="mobile wow fadeInLeft">
+            <li><a href="index.html">首頁</a></li>
+            <li class="sur-btn">服務項目
+                <div class="sur-menu">
+                  <div class="item"><a href="survice.html">路燈安裝</a></div>
+                  <div class="item"><a href="survice.html">室內安裝</a></div>
+                  <div class="item"><a href="survice.html">戶外照明</a></div>
+                </div>
+            </li>
+            <li><a href="Tel:0919016699">聯絡我們</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
     <h2 class="wow fadeInUp" data-wow-delay="0.5s">安裝實績</h2>
     <div class="photo">
         <div class="indoor wow fadeInLeft" data-wow-delay="0.5s">
@@ -215,26 +224,33 @@
     <footer class="wow fadeInDown">
         <div class="contact col-sm-12">
             <h1>晨富科技有限公司<br>CHEN-FU Technology. Co.,LTD</h1>
-            <ol>
+        </div>
+            <ol class="information">
                 <li>連絡電話：0919-016699</li>
                 <li>傳真：（04）2683-4665</li>
                 <li>地址：苗栗縣苑裡鎮泰田里泰田82-31號</li>
                 <li>電子信箱：chenfutec@gmail.com</li>
             </ol>
-        </div>
     </footer>
     <script src="kit/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="kit/jquery-3.6.0.min.js"></script>
     <script src="kit/jquery.fancybox.min.js"></script>
     <script src="kit/WOW-master/dist/wow.js"></script>
     <script>
+        //開場畫面
+    $(window).on('load', function () {
+      $(".overlay .logo").animate({ "opacity": 1, 'top': '0' }, 1000, function () {
+        $(".overlay").fadeOut();
+      });
+    });
         // 手機板 icon圖示
         $(".menu_btn").click(function () {
-            // console.log('click')
-            $(".mobile").toggleClass('show')
-            $(".moblieBg").toggleClass('show')
-            $('.icon').toggleClass('switch')
-        });
+      // console.log('click')
+      $("nav").toggleClass('show')
+      $(".mobile").toggleClass('show')
+      $(".moblieBg").toggleClass('show')
+      $('.icon').toggleClass('switch')
+    });
 
         $(window).scroll(function () {
             console.log($(this).scrollTop())
@@ -244,6 +260,10 @@
             // }
         });
 
+        //服務項目子項目
+    $(".sur-btn").click(function () {
+      $(".sur-menu").slideToggle();
+    });
         //開場特效
         new WOW().init();
 

@@ -4,154 +4,73 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* 開場LOGO */
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.logo {
+    background-image: url(../img/ChenFu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+}
+/* ----開場LOGO---- */
 
 .LGlogo {
     z-index: 3;
-    width: 15%;
+    width: 12%;
     display: block;
     margin-top: 20px;
     position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
-    /* animation: url(#未命名漸層_2-3) ease forwards 4s; */
 }
 
-.LGlogo path:nth-child(1){
-    stroke-dasharray: 3051;
-    stroke-dashoffset: 3051;
-    animation: line-anim 2s ease forwards;
-}
-.LGlogo path:nth-child(2){
-    stroke-dasharray: 2649;
-    stroke-dashoffset: 2649;
-    animation: line-anim 2s ease forwards 0.3s;
-}
-.LGlogo path:nth-child(3){
-    stroke-dasharray: 3051;
-    stroke-dashoffset: 3051;
-    animation: line-anim 2s ease forwards 0.6s;
-}
-.LGlogo path:nth-child(4){
-    stroke-dasharray: 2649;
-    stroke-dashoffset: 2649;
-    animation: line-anim 2s ease forwards 0.9s;
-}
-.LGlogo path:nth-child(5){
-    stroke-dasharray: 2100;
-    stroke-dashoffset: 2100;
-    animation: line-anim 2s ease forwards 1.2s;
-}
-.LGlogo path:nth-child(6){
-    stroke-dasharray: 1182;
-    stroke-dashoffset: 1182;
-    animation: line-anim 2s ease forwards 1.5s;
-}
-.LGlogo path:nth-child(7){
-    stroke-dasharray: 1168;
-    stroke-dashoffset: 1168;
-    animation: line-anim 2s ease forwards 1.8s;
-}
-.LGlogo path:nth-child(8){
-    stroke-dasharray: 1140;
-    stroke-dashoffset: 1140;
-    animation: line-anim 2s ease forwards 2.1s;
-}
-.LGlogo path:nth-child(9){
-    stroke-dasharray: 1124;
-    stroke-dashoffset: 1124;
-    animation: line-anim 2s ease forwards 2.4s;
-}
-.LGlogo path:nth-child(10){
-    stroke-dasharray: 1096;
-    stroke-dashoffset: 1096;
-    animation: line-anim 2s ease forwards 2.7s;
-}
-.LGlogo path:nth-child(11){
-    stroke-dasharray: 1083;
-    stroke-dashoffset: 1083;
-    animation: line-anim 2s ease forwards 3s;
-}
-.LGlogo path:nth-child(12){
-    stroke-dasharray: 1055;
-    stroke-dashoffset: 1055;
-    animation: line-anim 2s ease forwards 3.3s;
-}
-@keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-/* @keyframes animate{
-    0%{
-        stroke-dashoffset: 0;
-    }
-    40%{
-        stroke-dashoffset: 1525;
-    }
-    80%{
-        stroke-dashoffset: 3051;
-        fill: transparent;
-    }
-    100%{
-        stroke-dashoffset: 3120;
-        fill: url(#未命名漸層_2-3);
-    }
-} */
-@keyframes fill {
-    from {
-        fill: transparent;
-    }
-    to {
-        fill: url(#未命名漸層_2-3);
-    }
-}
+
 /* 桌機板 */
 @media screen and (max-width: 2000px) {
-    header{
+    header {
         position: relative;
     }
+
     .carousel-inner {
         height: 65vh;
         margin-top: 65px;
     }
-    .title{
+
+    .title {
         background-image: url(../img/title.jpg);
         background-position: center center;
         background-size: cover;
-        /* background-repeat: no-repeat; */
         width: 100%;
         height: 32vh;
-        /* position: relative; */
-        /* top: -1px; */
     }
-
-    
-
-    .leftLOGO {
-        display: none;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        width: 150px;
-        padding-bottom: 150px;
-        background-image: url(../img/ChenFu.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin: 0 auto;
-    }
-
 
     nav {
         position: fixed;
         top: 260px;
     }
+
     .mobile {
         width: 180px;
         display: flex;
         flex-direction: column;
         padding: 0;
-        /* margin-top: 50px; */
 
     }
 
@@ -169,32 +88,37 @@
 
     /* 公司簡介&服務項目 */
 
-    .survice{
+    .survice {
         margin: 100px 0;
     }
-    .introduction{
+
+    .introduction {
         width: 65%;
         margin: auto;
     }
-    h2{
+
+    h2 {
         margin-top: 20px;
         text-align: center;
         margin-bottom: 25px;
     }
 
-    h3{
+    h3 {
         margin-top: 100px;
         text-align: center;
         margin-bottom: 50px;
     }
-    p{
+
+    p {
         font-size: 21px;
     }
-    .sur{
+
+    .sur {
         display: flex;
         justify-content: space-between;
-        
+
     }
+
     h4 {
         margin-top: 20px;
         text-align: center;
@@ -225,7 +149,7 @@
         background-repeat: no-repeat;
     }
 
-    .icon-3{
+    .icon-3 {
         background-image: url(../img/window.png);
         background-size: 90px;
         background-repeat: no-repeat;
@@ -240,112 +164,56 @@
     }
 
     /* footer */
-    footer{
-        /* margin: 0 auto; */
+    footer {
         margin-top: 100px;
         background-color: cadetblue;
         position: relative;
         bottom: -100px;
+        display: flex;
     }
-    .contact{
+
+    .contact {
         width: 50%;
         padding-bottom: 50px;
     }
-    h1{
-        font-size: 20px;
+
+    h1 {
+        font-size: 25px;
         color: #fff;
         padding-top: 50px;
         text-align: center;
     }
-    ol{
+
+    .information {
         padding: 0;
         margin: 0;
         text-align: center;
         color: #fff;
+        padding-top: 30px;
+        width: 100%;
     }
 }
 
 /* 平板版 */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 770px) {
     .carousel-inner {
         height: 40vh;
     }
-    .sur{
-        display: flex;
-        /* justify-content: center; */
-        /* flex-direction: column; */
-    }
-    h3{
-        margin-top: 30px;
-    }
-}
-
-/* 手機版 */
-@media screen and (max-width: 576px) {
-    body {
-        width: 100%;
-    }
-
-    header {
-        display: block;
-        /* margin-top: 20px; */
-        position: relative;
-    }
-
-    h1 {
-        margin: 0 auto;
-        text-align: center;
-    }
-    /* .leftLOGO{
-        display: none;
-    } */
-
-    /* .logo {
-        background-image: url(../img/ChenFu.svg);
-        background-size: contain;
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        width: 100px;
-        padding-bottom: 110px;
-        margin: 0px auto;
-    } */
-
-    .LGlogo {
-        z-index: 3;
-        width: 26%;
-        display: block;
-        margin-top: 15px;
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%, -50%);
-        /* animation: url(#未命名漸層_2-3) ease forwards 4s; */
-    }
-
-    .title{
+    .title {
         background-image: url(../img/title.jpg);
         background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
-        height: 18vh;
-        position: relative;
-        top: -1px;
+        height: 20vh;
     }
-
-
-    .container {
+    .survice{
         margin: 0 auto;
-        padding: 0;
-        height: 95vh;
     }
-
-    .carousel-inner {
-        height: 100%;
+    .introduction {
+        width: 65%;
+        margin: auto;
     }
-
-
-    /* menu icon */
+    /* menu */
 
     .menu {
         position: fixed;
@@ -404,9 +272,8 @@
         transform: translateY(30px);
         transform: rotate(-405deg);
     }
-    
+
     .mobile {
-        /* display: none; */
         width: 100%;
         height: 100vh;
         position: fixed;
@@ -417,57 +284,71 @@
         padding: 0;
         transition: all 0.5s;
     }
-    
+
     nav {
         display: block;
         z-index: 3;
     }
-    
+    .sur-menu{
+        display: none;
+    }
+
     .mobile>li {
-        /* display: block; */
         margin: auto 0px auto 114px;
         font-size: 24px;
     }
-    
+
+    li>a , .sur-btn {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+    }
+    .item>a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .mobile>li {
+        margin: auto 0px auto 210px;
+        font-size: 30px;
+    }
+
     li>a {
         text-align: center;
         display: block;
         text-decoration: none;
         color: #fff;
     }
-    
-    .moblieBg{
-        /* display: none; */
+
+    .moblieBg {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.308);
         height: 110vh;
         position: relative;
         left: -100%;
         transition: all 0.5s;
-        /* z-index: 9; */
     }
-    nav.show{
+
+    nav.show {
         display: block;
         width: 100%;
         transition: all 0.5s;
     }
-    .moblieBg.show{
+
+    .moblieBg.show {
         display: block;
         left: 0%;
         top: -280px;
     }
+
     .mobile.show {
         left: -30%;
-        
+
     }
 
 
     /* menu icon  */
-
-
-    .introduction{
-        width: 100%;
-    }
 
     .survice {
         padding: 10px 20px;
@@ -477,7 +358,6 @@
 
     h2 {
         text-align: center;
-        /* margin-top: 15%; */
         margin-bottom: 5%;
     }
 
@@ -487,22 +367,22 @@
         font-size: 18px;
     }
 
-    h3{
+    h3 {
         text-align: center;
         margin: 50px;
         padding: 0;
         letter-spacing: 2px;
     }
-    h4{
-        padding: 0;
-        margin: 30px;
+
+    h4 {
         text-align: center;
         letter-spacing: 2px;
         margin-bottom: 60px;
         margin-top: 20px;
         padding-bottom: 0px;
     }
-    .sur{
+
+    .sur {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -533,7 +413,282 @@
         background-repeat: no-repeat;
     }
 
-    .icon-3{
+    .icon-3 {
+        background-image: url(../img/window.png);
+        background-size: 70px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .icon-4 {
+        background-image: url(../img/客服.png);
+        background-size: 75px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .sur {
+        display: flex;
+    }
+
+    h3 {
+        margin-top: 30px;
+    }
+}
+
+/* 手機版 */
+@media screen and (max-width: 576px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        display: block;
+        position: relative;
+    }
+
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* 開場畫面 */
+
+    .logo {
+        width: 45%;
+    }
+
+
+    .LGlogo {
+        z-index: 3;
+        width: 26%;
+        display: block;
+        margin-top: 5px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title {
+        background-image: url(../img/title.jpg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 18vh;
+        position: relative;
+        top: -15px;
+    }
+
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        height: 95vh;
+    }
+
+    .introduction {
+        width: 100%;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+
+    /* menu */
+
+    .menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9;
+    }
+
+    .menu_btn {
+        background-color: rgba(112, 218, 245, 0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .icon {
+        margin: auto;
+        width: 28px;
+        height: 28px;
+        position: relative;
+    }
+
+    .line {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: black;
+        border-radius: 99em;
+        transition: all 0.8s;
+    }
+
+    .top {
+        top: 20%;
+    }
+
+    .middle {
+        top: 60%;
+    }
+
+    .bottom {
+        top: 100%;
+    }
+
+    .icon.switch .top {
+        transform: translateY(0);
+        transform: rotate(405deg);
+        top: 60%;
+    }
+
+    .icon.switch .middle {
+        display: none;
+    }
+
+    .icon.switch .bottom {
+        top: 60%;
+        transform: translateY(30px);
+        transform: rotate(-405deg);
+    }
+
+    .mobile {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: rgb(39, 142, 168);
+        top: 0;
+        left: -100%;
+        z-index: 9;
+        padding: 0;
+        transition: all 0.5s;
+    }
+
+    nav {
+        display: block;
+        z-index: 3;
+    }
+    .sur-menu{
+        display: none;
+    }
+
+    .mobile>li {
+        margin: auto 0px auto 114px;
+        font-size: 24px;
+    }
+
+    li>a , .sur-btn {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+    }
+    .item>a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .moblieBg {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.308);
+        height: 110vh;
+        position: relative;
+        left: -100%;
+        transition: all 0.5s;
+    }
+
+    nav.show {
+        display: block;
+        width: 100%;
+        transition: all 0.5s;
+    }
+
+    .moblieBg.show {
+        display: block;
+        left: 0%;
+        top: -280px;
+    }
+
+    .mobile.show {
+        left: -30%;
+
+    }
+
+
+    /* menu icon  */
+
+
+    .survice {
+        /* padding: 10px 15px; */
+        margin: 0 auto;
+
+    }
+
+    h2 {
+        text-align: center;
+        /* margin-top: 15%; */
+        margin-bottom: 5%;
+    }
+
+    p {
+        letter-spacing: 3px;
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 50px;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+
+    h4 {
+        padding: 0;
+        margin: 20px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 60px;
+        margin-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .sur {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .icon-1,
+    .icon-2,
+    .icon-3,
+    .icon-4 {
+        background-color: rgb(112, 218, 245);
+        width: 110px;
+        height: 110px;
+        margin: 0 auto;
+        border-radius: 150px;
+    }
+
+    .icon-1 {
+        background-image: url(../img/street-light.png);
+        background-position: center center;
+        background-size: 75px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-2 {
+        background-image: url(../img/light-bulb.png);
+        background-size: 80px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .icon-3 {
         background-image: url(../img/window.png);
         background-size: 70px;
         background-repeat: no-repeat;
@@ -549,9 +704,15 @@
 
     /* footer */
     footer{
-padding-bottom: 10px;
+        display: block;
+        width: 100%;
     }
     .contact{
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    .information{
+        padding: 0px 0 40px 0;
         width: 100%;
     }
 }
